@@ -2,7 +2,7 @@ import { elements } from "./elements"
 
 class Login {
     visitarPagina() {
-        cy.visit('/')
+        cy.visit('https://www.saucedemo.com/')
     }
 
     prencherCredenciaisValidas(){
