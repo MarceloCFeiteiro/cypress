@@ -2,6 +2,7 @@ import { elements } from "./elements"
 
 class Login {
     visitarPagina() {
+        cy.log(Cypress.env('baseUrl'))
         cy.visit('/')
     }
 
