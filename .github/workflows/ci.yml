@@ -6,12 +6,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Cypress run
-        env:
-          BASE_URL: ${{secrets.BASE_URL}}
-        run: echo "O valor da variável BASE_URL é: $BASE_URL"
         uses: cypress-io/github-action@v6
-      - uses: actions/upload-artifact@v4
+        with:
+          env:
+            BASE_URL: ${{secrets.BASE_URL}}
+          command: echo "O valor da variável BASE_URL é: $BASE_URL"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-reports
           path: cypress/reports
