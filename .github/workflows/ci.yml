@@ -12,7 +12,6 @@ jobs:
         with:
           env:
             BASE_URL: ${{secrets.BASE_URL}}
-          command: echo "O valor da variável BASE_URL é: $BASE_URL"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
