@@ -9,7 +9,7 @@ jobs:
       - name: Cypress run
         env:
           BASE_URL: ${{secrets.BASE_URL}}
-        run: echo "O valor da variável BASE_URL é: $BASE_URL"
+        run: "echo "O valor da variável BASE_URL é: $BASE_URL"
         uses: cypress-io/github-action@v6
       - uses: actions/upload-artifact@v4
         with:
