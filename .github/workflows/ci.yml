@@ -11,11 +11,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v6          
-
       - name: Print BASE_URL  
         run: echo "${BASE_URL} -->"
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6          
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
