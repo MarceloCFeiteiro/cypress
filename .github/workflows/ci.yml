@@ -3,7 +3,7 @@ on: push
 
 env:
   BASE_URL: ${{secrets.BASE_URL}}
-  URL: $BASE_URL
+  URL: $BATATA
 
 jobs:
   cypress-run:
@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print BASE_URL  
-        run: echo "${{env.BASE_URL}} -> $URL -> $BASE_URL"
+        run: echo "${{env.BASE_URL}} -> $URL -> $BATATA"
 
       - name: Cypress run
         uses: cypress-io/github-action@v6          
