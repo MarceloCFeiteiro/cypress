@@ -2,7 +2,7 @@ name: End-to-end tests
 on: push
 
 env:
-  BASE_URL: ${{secrets.BASE_URL}}
+  BASE_URL: ${{ secrets.BASE_URL }}
   URL: $BATATA
 
 jobs:
