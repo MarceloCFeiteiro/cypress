@@ -2,6 +2,8 @@ import { elements } from "./elements"
 
 class Login {
     visitarPagina() {
+        cy.log(Cypress.env('baseUrl'))
+        console.log(Cypress.env('baseUrl'))
         cy.visit(Cypress.env('baseUrl'))
     }
 
