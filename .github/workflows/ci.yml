@@ -1,9 +1,9 @@
 name: End-to-end tests
 on: push
 
-env:
-  BASE_URL: ${{ env.BASE_URL_VAR }}
-  URL: $BATATA
+##env:
+##  BASE_URL: ${{ env.BASE_URL_VAR }}
+##  URL: $BATATA
 
 jobs:
   cypress-run:
