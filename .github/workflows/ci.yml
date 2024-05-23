@@ -17,7 +17,7 @@ jobs:
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
           echo "${{env.BASE_URL_TESTE}}"
-          echo "${{env..TESTE.BASE_URL_TESTE}}"
+          echo "${{env.TESTE.BASE_URL_TESTE}}"
           echo "${{TESTE.BASE_URL_TESTE}}"
 
       - name: Cypress run
