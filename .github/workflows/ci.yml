@@ -16,6 +16,7 @@ jobs:
           BASE_URL="${{ env.BASE_URL_VAR }}"
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
+          echo "${{BASE_URL_TESTE}}"
 
       - name: Cypress run
         uses: cypress-io/github-action@v6          
