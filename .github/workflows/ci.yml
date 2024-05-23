@@ -13,7 +13,7 @@ jobs:
 
       - name: Print BASE_URL  
         run:  |
-          BASE_URL = ${{ env.BASE_URL_VAR }}
+          BASE_URL="${{ env.BASE_URL_VAR }}"
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
 
