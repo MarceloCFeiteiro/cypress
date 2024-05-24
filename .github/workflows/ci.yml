@@ -4,7 +4,7 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
-    environment: TESTE
+#    environment: TESTE
 
     steps:
       - name: Checkout
@@ -13,8 +13,8 @@ jobs:
       - name: Configurar variáveis de ambiente
         run: |
          echo "CONFIGURANDO VÁRIAVEIS DE AMBIENTE"
-        env: 
-         BASE_URL_T: ${{ vars.BASE_URL_REPOSITORY_VAR }}
+   #     env: 
+   #      BASE_URL_T: ${{ vars.BASE_URL_REPOSITORY_VAR }}
 
       - name: Print BASE_URL  
         run:  |
