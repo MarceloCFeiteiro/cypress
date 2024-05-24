@@ -26,6 +26,8 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        env:
+          baseUrl: ${{ vars.BASE_URL_REPOSITORY_VAR }}
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
