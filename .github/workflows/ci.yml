@@ -20,7 +20,6 @@ jobs:
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
           echo "${{env.BASE_URL_TESTE}}"
-          echo "--> ${{ BASE_URL }}"
           echo "BASE_URL_VAR (definido como variável de ambiente): ${{ vars.BASE_URL_REPOSITORY_VAR }}"
           echo "Nome (definido como variável de ambiente): ${{ vars.nome }}"
 
