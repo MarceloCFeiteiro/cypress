@@ -14,7 +14,7 @@ jobs:
         run: |
          echo "CONFIGURANDO VÁRIAVEIS DE AMBIENTE"
         env: 
-         BASE_URL: ${{ secrets.BASE_URL_ENV_SECRET }}
+         BASE_URL_T: ${{ vars.BASE_URL_REPOSITORY_VAR }}
 
       - name: Print BASE_URL  
         run:  |
@@ -24,6 +24,7 @@ jobs:
           echo "${{env.BASE_URL_TESTE}}"
           echo "${{env.TESTE.BASE_URL_TESTE}}"
           echo "BASE_URL_VAR (definido como variável de ambiente): $BASE_URL_ENV_VAR"
+          echo "BASE_URL_VAR (definido como variável de ambiente): $BASE_URL_T"
 
       - name: Cypress run
         uses: cypress-io/github-action@v6          
