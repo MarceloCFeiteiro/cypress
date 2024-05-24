@@ -1,16 +1,20 @@
 name: End-to-end tests
 on: push
 
-env:
-  BASE_URL: ${{ TESTE.BASE_URL_VAR }}
-
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     environment: TESTE
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Configurar variáveis de ambiente
+        run: |
+         echo "CONFIGURANDO VÁRIAVEIS DE AMBIENTE"
+        env: 
+         BASE_URL: ${{ secrets.BASE_URL }}
 
       - name: Print BASE_URL  
         run:  |
