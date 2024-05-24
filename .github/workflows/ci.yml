@@ -23,8 +23,8 @@ jobs:
           echo "${{env.BASE_URL_VAR}}"
           echo "${{env.BASE_URL_TESTE}}"
           echo "${{env.TESTE.BASE_URL_TESTE}}"
-          echo "BASE_URL_VAR (definido como variável de ambiente): $BASE_URL_ENV_VAR"
-          echo "BASE_URL_VAR (definido como variável de ambiente): ${{BASE_URL_T}}"
+          echo "BASE_URL_VAR (definido como variável de ambiente): ${{ vars.BASE_URL_REPOSITORY_VAR }}"
+          echo "BASE_URL_VAR (definido como variável de ambiente): $BASE_URL_T"
 
       - name: Cypress run
         uses: cypress-io/github-action@v6          
