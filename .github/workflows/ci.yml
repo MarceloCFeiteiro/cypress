@@ -14,7 +14,7 @@ jobs:
         run: |
          echo "CONFIGURANDO VÁRIAVEIS DE AMBIENTE"
         env: 
-         BASE_URL: ${{ secrets.BASE_URL }}
+         BASE_URL: ${{ secrets.BASE_URL_ENV_SECRET }}
 
       - name: Print BASE_URL  
         run:  |
