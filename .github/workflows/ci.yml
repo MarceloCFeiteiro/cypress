@@ -4,7 +4,7 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
-#    environment: TESTE
+    environment: dev
 
     steps:
       - name: Checkout
@@ -24,7 +24,7 @@ jobs:
           echo "${{env.BASE_URL_TESTE}}"
           echo "${{env.TESTE.BASE_URL_TESTE}}"
           echo "BASE_URL_VAR (definido como variável de ambiente): ${{ vars.BASE_URL_REPOSITORY_VAR }}"
-          echo "BASE_URL_VAR (definido como variável de ambiente): $BASE_URL_T"
+          echo "Nome (definido como variável de ambiente): ${{ vars.nome }}"
 
       - name: Cypress run
         uses: cypress-io/github-action@v6          
