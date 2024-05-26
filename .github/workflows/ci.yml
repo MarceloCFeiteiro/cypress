@@ -24,7 +24,6 @@ jobs:
 
       - name: Print BASE_URL  
         run:  |
-          BASE_URL="${{ BASE_URL_REPOSITORY_VAR }}"
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
           echo "${{env.BASE_URL_TESTE}}"
