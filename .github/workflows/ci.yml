@@ -1,27 +1,44 @@
 name: End-to-end tests
 on: push
 
-##env:
-##  BASE_URL: ${{ env.BASE_URL_VAR }}
-
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
-    environment: TESTE
+    environment: dev
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configurar variáveis de ambiente
+        run: |
+          echo "CONFIGURANDO VARIÁVEIS DE AMBIENTE"
+          envFileName=".env.dev"
+          echo "BASE_URL=${{ vars.BASE_URL_REPOSITORY_VAR }}" >> $envFileName
+          echo "Nome=${{ vars.nome }}" >> $envFileName
+          
+      - name: Verificar .env.dev
+        run: |
+          cat .env.dev
+
       - name: Print BASE_URL  
         run:  |
-          BASE_URL="${{ env.BASE_URL_VAR }}"
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
           echo "${{env.BASE_URL_TESTE}}"
-          echo "${{env.TESTE.BASE_URL_TESTE}}"
+          echo "BASE_URL_VAR (definido como variável de ambiente): ${{ vars.BASE_URL_REPOSITORY_VAR }}"
+          echo "Nome (definido como variável de ambiente): ${{ vars.nome }}"
+
+      - name: Debug Environment Variables
+        run: |
+          printenv
+        env:
+          BASE_URL: ${{ vars.BASE_URL_REPOSITORY_VAR }}
 
       - name: Cypress run
-        uses: cypress-io/github-action@v6          
+        uses: cypress-io/github-action@v6
+        env:
+          baseUrl: ${{ vars.BASE_URL_REPOSITORY_VAR }}
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
