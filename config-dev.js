@@ -7,7 +7,7 @@ dotenv.config({ path: path.join(__dirname, './.env.dev') })
 
 const e2e = {
     env: {
-        baseUrl: process.env.BASE_URL
+        baseUrl: process.env.BASE_URL,
         username: process.env.USER,
         password: process.env.PASSWORD
     }
