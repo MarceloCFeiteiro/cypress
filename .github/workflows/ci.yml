@@ -23,22 +23,15 @@ jobs:
 
       - name: Print BASE_URL  
         run:  |
-          echo "${{env.BASE_URL}}"
-          echo "${{env.BASE_URL_VAR}}"
-          echo "${{env.BASE_URL_TESTE}}"
           echo "BASE_URL_VAR (definido como variável de ambiente): ${{ vars.BASE_URL_REPOSITORY_VAR }}"
           echo "Nome (definido como variável de ambiente): ${{ vars.nome }}"
 
       - name: Debug Environment Variables
         run: |
           printenv
-        env:
-          BASE_URL: ${{ vars.BASE_URL_REPOSITORY_VAR }}
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        env:
-          baseUrl: ${{ vars.BASE_URL_REPOSITORY_VAR }}
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
