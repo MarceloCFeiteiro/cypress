@@ -14,9 +14,17 @@ jobs:
         run: |
          echo "CONFIGURANDO VÁRIAVEIS DE AMBIENTE"
 
+         steps:
+          - bash: |
+              envFileName=".env.dev"
+              
+              echo "BASE_URL=${{ vars.BASE_URL_REPOSITORY_VAR }}" >> $envFileName
+          #   echo "BASE_URL_API_ACCOUNT=$(BASE_URL_API_ACCOUNT)" >> $envFileName
+            displayName: 'Create the .env file'
+
       - name: Print BASE_URL  
         run:  |
-          BASE_URL="${{ env.BASE_URL_VAR }}"
+          BASE_URL="${{ BASE_URL_REPOSITORY_VAR }}"
           echo "${{env.BASE_URL}}"
           echo "${{env.BASE_URL_VAR}}"
           echo "${{env.BASE_URL_TESTE}}"
