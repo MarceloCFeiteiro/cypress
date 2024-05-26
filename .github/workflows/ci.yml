@@ -15,6 +15,8 @@ jobs:
           echo "CONFIGURANDO VARIÁVEIS DE AMBIENTE"
           envFileName=".env.dev"
           echo "BASE_URL=${{ vars.BASE_URL_REPOSITORY_VAR }}" >> $envFileName
+          echo "USER=${{ vars.USER }}" >> $envFileName
+          echo "PASSWORD=${{ vars.PASSWORD }}" >> $envFileName
           echo "Nome=${{ vars.nome }}" >> $envFileName
           
       - name: Verificar .env.dev
