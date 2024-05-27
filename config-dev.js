@@ -9,7 +9,7 @@ const e2e = {
     env: {
         baseUrl: process.env.BASE_URL,
         username: process.env.USER,
-        password: process.env.PASSWORD
+        password: process.env.USER_PASSWORD
     }
 }
 
