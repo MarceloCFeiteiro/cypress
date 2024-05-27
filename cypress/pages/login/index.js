@@ -10,7 +10,7 @@ class Login {
     }
 
     prencherCredenciaisValidas(){
-        cy.get(elements.username).type(Cypress.env('username'))
+        cy.get(elements.username).type('standard_user')
         cy.get(elements.password).type('secret_sauce')
         cy.get(elements.loginButton).click()
     }
