@@ -36,7 +36,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           config-file: config-dev.js
-          record: true
           
       - uses: actions/upload-artifact@v4
         with:
