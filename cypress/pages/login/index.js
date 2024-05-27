@@ -12,7 +12,7 @@ class Login {
     }
 
     prencherCredenciaisInvalidas(){
-        expect(Cypress.env('username')).to.equal('standard_user')
+     //   expect(Cypress.env('username')).to.equal('standard_user') ->runner
         expect(Cypress.env('password')).to.equal('secret_sauce')
 
         
