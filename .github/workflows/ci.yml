@@ -36,13 +36,10 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           config-file: config-dev.js
-      - uses: actions/upload-artifact@v4
+          
+      - name: Upload Cypress Mochawesome Report
+        uses: actions/upload-artifact@v4
         with:
-          name: cypress-reports
-          path: cypress/reports
-          if-no-files-found: ignore
-      - uses: actions/upload-artifact@v4
-        with:
-          name: cypress-videos
-          path: cypress/videos
-          if-no-files-found: ignore
+          name: mochawesome-report
+          path: cypress/reports/html/.jsons/mochawesome.json
+          if-no-files-found: error
