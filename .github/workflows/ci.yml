@@ -36,6 +36,9 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           config-file: config-dev.js
+          
+      - uses: actions/upload-artifact@v4
+        with:
           name: cypress-screenshots
           path: cypress/screenshots
           if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
