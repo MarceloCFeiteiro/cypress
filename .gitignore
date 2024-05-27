@@ -52,9 +52,9 @@ Thumbs.db
 cypress/downloads
 cypress/screenshots
 cypress/videos
-cypress/reports/html
+cypress/reports
 cypress/snapshots/**/diffs
-cypress/reports/junit
+cypress/reports/junit/*
 cucumber-messages.ndjson
 cucumber-report.html
 
