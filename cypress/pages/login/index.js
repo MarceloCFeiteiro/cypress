@@ -2,16 +2,12 @@ import { elements } from "./elements"
 
 class Login {
     visitarPagina() {
-        cy.log('Aqui')
-        cy.log(Cypress.env('baseUrl'))
-        console.log(Cypress.env('baseUrl'))
-        console.log('Aqui')
         cy.visit(Cypress.env('baseUrl'))
     }
 
     prencherCredenciaisValidas(){
-        cy.get(elements.username).type('standard_user')
-        cy.get(elements.password).type('secret_sauce')
+        cy.get(elements.username).type(Cypress.env('username'))
+        cy.get(elements.password).type(Cypress.env('password'))
         cy.get(elements.loginButton).click()
     }
 
