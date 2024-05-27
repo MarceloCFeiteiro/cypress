@@ -36,9 +36,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           config-file: config-dev.js
-        
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: cypress-reports
           path: cypress/reports
